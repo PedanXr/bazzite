@@ -41,7 +41,7 @@ jobs:
 
       - name: Sign Image
         env:
-          SIGNING_KEY: ${{ secrets.SIGNING_SECRET }}
+          SIGNING_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
           IMAGE_NAME: ${{ steps.get-digest.outputs.NAME }}
           IMAGE_DIGEST: ${{ steps.get-digest.outputs.DIGEST }}
         run: |
